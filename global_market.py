@@ -1,4 +1,5 @@
 from stock import Stock
+from game_utils import GameUtils as gutils
 
 ''' global_market.py '''
 class GlobalMarket(object):
@@ -47,10 +48,15 @@ class GlobalMarket(object):
         self.stocks.append(new_stock)
 
     def process(self):
-        return False
+        choice = gutils.main_menu()
+        if choice == 'C':
+            return False
+        else:
+            return True
 
     def update(self):
         ''' update all global_market stuff to simulate activity '''
+        self.rountcnt += 1
         # stocks
 
         # funds
