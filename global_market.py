@@ -14,7 +14,7 @@ class GlobalMarket(object):
     def prepare(self):
         # is this a new or existing game?
         choice = raw_input("Is this a (N)ew or (E)xisting game?")
-        if ''.upper(choice) == 'N':
+        if choice.upper() == 'N':
             self.new_game()
         else:
             self.load_game()
