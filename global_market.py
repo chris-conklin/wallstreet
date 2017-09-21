@@ -21,7 +21,7 @@ class GlobalMarket(object):
             total += (S.get_shares() * S.get_price())
         for F in self.funds:
             total += F.get_value()
-        for C in self.commoditites:
+        for C in self.commodities:
             total += C.get_value()
         return total
 
@@ -34,7 +34,7 @@ class GlobalMarket(object):
         self.stocks.append(new_stock)
 
     def process(self):
-
+        return False
 
     def update(self):
         ''' update all global_market stuff to simulate activity '''

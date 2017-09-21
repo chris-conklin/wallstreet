@@ -26,12 +26,13 @@ def main():
 
     print str(gm.get_global_market_value())
 
-    quit = True
-    while(!quit):
-        quit = gm.process()
+    stopped = False
+    while not stopped:
+        stopped = gm.process()
         gm.update()
 
 
 
 if __name__ == '__main__':
     main()
+    
