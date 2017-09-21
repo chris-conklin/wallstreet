@@ -1,5 +1,6 @@
-class Stock:
-
+''' WallStreet Stock module '''
+class Stock(object):
+    ''' creates a stock object '''
     def __init__(self, symbol, name, shares=0, price=0):
         self.symbol = symbol
         self.shares = shares
@@ -7,37 +8,39 @@ class Stock:
         self.name = name
 
 
-    def getName(self):
+    def get_name(self):
         return self.name
         
-    def setName(self, newname):
+    def set_name(self, newname):
         self.name = newname
 
-    def getSymbol(self):
+    def get_symbol(self):
         return self.symbol
 
-    def setSymbol(self, newSymbol):
+    def set_symbol(self, newSymbol):
         self.symbol = newSymbol
 
-    def getPrice(self):
+    def get_price(self):
         return self.price
 
-    def setPrice(self, newamt):
+    def set_price(self, newamt):
         self.price = newamt
 
-    def getShares(self):
+    def get_shares(self):
         return self.shares
 
-    def setShares(self, newamt):
+    def set_shares(self, newamt):
         self.shares = newamt
 
-    def addShares(self, addition):
+    def add_shares(self, addition):
         self.shares += addition
 
-    def subShares(self, deduction):
+    def sub_shares(self, deduction):
         self.shares -= deduction
 
-    def getTickerLine(self):
-        return self.symbol + " | " + self.name  + " | " + str(self.shares)  + " | " + str(self.price)
+    def get_value(self):
+        return self.get_shares() * self.get_price()
 
+    def get_ticker_line(self):
+        return self.symbol + " | " + self.name  + " | " + str(self.shares)  + " | " + str(self.price) + " | " + str(self.get_value())
 
