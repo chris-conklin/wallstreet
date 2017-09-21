@@ -9,12 +9,20 @@ class GlobalMarket(object):
         self.commodities = []
         self.market_cap = 0
         self.optimism = 1.0
+        self.rountcnt = 0
 
+    
     def get_global_market_value(self):
         '''return the total net worth of stocks,funds and comm'''
         total = 0
+        # TODO: Could this be a superclass with subclass
+        # objects that each have a get_value method??
         for S in self.stocks:
             total += (S.get_shares() * S.get_price())
+        for F in self.funds:
+            total += F.get_value()
+        for C in self.commoditites:
+            total += C.get_value()
         return total
 
     def get_global_market_stocks(self):
@@ -25,7 +33,10 @@ class GlobalMarket(object):
         ''' Add a Stock to the GM '''
         self.stocks.append(new_stock)
 
-    def tick(self):
+    def process(self):
+
+
+    def update(self):
         ''' update all global_market stuff to simulate activity '''
         # stocks
 
