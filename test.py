@@ -27,6 +27,7 @@ def main():
     print str(gm.get_global_market_value())
 
     stopped = False
+    gm.prepare()
     while not stopped:
         stopped = gm.process()
         gm.update()
