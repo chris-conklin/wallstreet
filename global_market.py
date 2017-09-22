@@ -14,7 +14,7 @@ class GlobalMarket(object):
 
     def prepare(self):
         # is this a new or existing game?
-        choice = raw_input("Is this a (N)ew or (E)xisting game?")
+        choice = gutils.get_game_type()
         if choice.upper() == 'N':
             self.new_game()
         else:
@@ -31,12 +31,12 @@ class GlobalMarket(object):
         total = 0
         # TODO: Could this be a superclass with subclass
         # objects that each have a get_value method??
-        for S in self.stocks:
-            total += (S.get_shares() * S.get_price())
-        for F in self.funds:
-            total += F.get_value()
-        for C in self.commodities:
-            total += C.get_value()
+        for stk in self.stocks:
+            total += stk.get_value()
+        for fnd in self.funds:
+            total += fnd.get_value()
+        for cty in self.commodities:
+            total += cty.get_value()
         return total
 
     def get_global_market_stocks(self):

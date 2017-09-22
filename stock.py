@@ -6,6 +6,8 @@ class Stock(object):
         self.shares = shares
         self.price = price
         self.name = name
+        self.annual_high
+        self.annual_low
 
 
     def get_name(self):
@@ -25,6 +27,18 @@ class Stock(object):
 
     def set_price(self, newamt):
         self.price = newamt
+
+    def get_annual_high(self):
+        return self.annual_high
+
+    def set_annual_high(self, newamt):
+        self.annual_high = newamt
+
+    def get_annual_low(self):
+        return self.annual_low
+
+    def set_annual_low(self, newamt):
+        self.annual_low = newamt
 
     def get_shares(self):
         return self.shares
