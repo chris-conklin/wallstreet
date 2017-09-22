@@ -16,7 +16,7 @@ class GameUtils(object):
 
     @staticmethod
     def get_game_type():
-        menu_string = '''Is this a (N)ew or (E)xisting game\n?'''
+        menu_string = '''Is this a (N)ew or (E)xisting game\n? '''
         return raw_input(menu_string).upper()
 
         
