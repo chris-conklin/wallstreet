@@ -1,5 +1,7 @@
+from investment import Investment
+
 ''' The fund class '''
-class Fund(object):
+class Fund(Investment):
     ''' The fund class '''
     def __init__(self):
         self.value = 0

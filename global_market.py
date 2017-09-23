@@ -1,5 +1,5 @@
 from stock import Stock
-from game_utils import GameUtils as gutils
+import game_utils as gutils
 
 ''' global_market.py '''
 class GlobalMarket(object):

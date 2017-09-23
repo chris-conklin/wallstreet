@@ -6,8 +6,8 @@ class Stock(object):
         self.shares = shares
         self.price = price
         self.name = name
-        self.annual_high
-        self.annual_low
+        self.annual_high = 0
+        self.annual_low = 0
 
 
     def get_name(self):
