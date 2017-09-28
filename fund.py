@@ -3,10 +3,10 @@ from investment import Investment
 ''' The fund class '''
 class Fund(Investment):
     ''' The fund class '''
-    def __init__(self, title):
+    def __init__(self, title, intialvalue, initialrate):
         self.title = title
-        self.value = 0
-        self.current_rate = 0
+        self.value = intialvalue
+        self.current_rate = initialrate
         self.rate_high = 0
         self.rate_low = 0
     
