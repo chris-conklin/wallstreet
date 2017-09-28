@@ -1,8 +1,9 @@
 class Investment(object):
-    def __init__(self):
-        self.high = 0
-        self.low = 0
-        self.type = 'super'
+    def __init__(self, ):
+        self.highvalue = 0
+        self.lowvalue = 0
+        
 
     def get_value(self):
         raise NotImplementedError
+
