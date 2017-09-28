@@ -1,5 +1,6 @@
 from stock import Stock
 import game_utils as gutils
+import stock_manager
 
 ''' global_market.py '''
 class GlobalMarket(object):
@@ -21,7 +22,16 @@ class GlobalMarket(object):
             self.load_game()
     
     def new_game(self):
-        print "We're getting kinda rabbit holed!"
+        print "Generating New Stocks..."
+        TESTER1 = stock_manager.generate_stock("MMM", "Moneymust", 1, 75, 250, 1200)
+        TESTER2 = stock_manager.generate_stock("ABC", "Alphabet", 12, 75, 250, 1100)
+        TESTER3 = stock_manager.generate_stock("IBM", "International Business Machines")
+        TESTER4 = stock_manager.generate_stock("MCI","Metro Communications Inc")
+        self.add_stock(TESTER1)
+        self.add_stock(TESTER2)
+        self.add_stock(TESTER3)
+        self.add_stock(TESTER4)
+
 
     def load_game(self):
         print "We're not there yet"

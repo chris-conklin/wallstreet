@@ -19,22 +19,16 @@ def main():
     #TESTER4 = Stock(tick, name, 756, 188)
 
     gm = GlobalMarket()
-    gm.add_stock(TESTER1)
-    gm.add_stock(TESTER2)
-    gm.add_stock(TESTER3)
-    gm.add_stock(TESTER4)
-
-    for stock in gm.get_global_market_stocks():
-        print stock.get_ticker_line()
-
-    print str(gm.get_global_market_value())
-
     stopped = False
     gm.prepare()
     while not stopped:
         stopped = gm.process()
         gm.update()
 
+    for stock in gm.get_global_market_stocks():
+        print stock.get_ticker_line()
+
+    print str(gm.get_global_market_value())
 
 
 if __name__ == '__main__':
