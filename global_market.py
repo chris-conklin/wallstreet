@@ -31,6 +31,7 @@ class GlobalMarket(object):
         self.add_stock(TESTER2)
         self.add_stock(TESTER3)
         self.add_stock(TESTER4)
+        self.rowcnt = 0
 
 
     def load_game(self):
