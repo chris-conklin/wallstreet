@@ -1,6 +1,7 @@
 ''' things that are helpful '''
 
 from stock import Stock
+import random
 
 def main_menu():
     valid_inputs = ['C', 'c', 'Q','q']
@@ -23,3 +24,10 @@ def load_saved_game(gamefile):
     ''' read game stuff '''
     with open(gamefile, 'r') as oldgame:
         pass
+
+def get_random_integer(min, max):
+    return random.randint(min,max)
+
+def get_random_float(minf, maxf):
+    return random.uniform(min, max)
+
