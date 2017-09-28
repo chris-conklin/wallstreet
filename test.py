@@ -1,13 +1,16 @@
 ''' test the code '''
-from stock import Stock
+
 from global_market import GlobalMarket
+import stock_manager
 
 
 def main():
 
-    TESTER1 = Stock("MMM", "Moneymust", 100, 100)
-    TESTER2 = Stock("ABC", "Alphabet", 182, 1132)
-    TESTER3 = Stock("IBM", "International Business Machines", 113, 1789)
+    TESTER1 = stock_manager.generate_stock("MMM", "Moneymust", 1, 75, 250, 1200)
+    TESTER2 = stock_manager.generate_stock("ABC", "Alphabet", 12, 75, 250, 1100)
+    TESTER3 = stock_manager.generate_stock("IBM", "International Business Machines")
+
+    TESTER4 = stock_manager.generate_stock("MCI","Metro Communications Inc")
 
     print 
     #tick = raw_input("Enter the symbol of the stock (3 letters)")
@@ -19,7 +22,7 @@ def main():
     gm.add_stock(TESTER1)
     gm.add_stock(TESTER2)
     gm.add_stock(TESTER3)
-    #gm.add_stock(TESTER4)
+    gm.add_stock(TESTER4)
 
     for stock in gm.get_global_market_stocks():
         print stock.get_ticker_line()
