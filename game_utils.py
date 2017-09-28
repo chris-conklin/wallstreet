@@ -29,5 +29,5 @@ def get_random_integer(min, max):
     return random.randint(min,max)
 
 def get_random_float(minf, maxf):
-    return random.uniform(min, max)
+    return random.uniform(minf, maxf)
 
