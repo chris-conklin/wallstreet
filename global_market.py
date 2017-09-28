@@ -1,6 +1,7 @@
 from stock import Stock
 import game_utils as gutils
 import stock_manager
+import fund_manager
 
 ''' global_market.py '''
 class GlobalMarket(object):
@@ -27,11 +28,16 @@ class GlobalMarket(object):
         TESTER2 = stock_manager.generate_stock("ABC", "Alphabet", 12, 75, 250, 1100)
         TESTER3 = stock_manager.generate_stock("IBM", "International Business Machines")
         TESTER4 = stock_manager.generate_stock("MCI","Metro Communications Inc")
+        TESTER5 = fund_manager.generate_fund("Bogles Anon", 200, 500)
+        TESTER6 = fund_manager.generate_fund("Teacher Union United")
         self.add_stock(TESTER1)
         self.add_stock(TESTER2)
         self.add_stock(TESTER3)
         self.add_stock(TESTER4)
+        self.add_fund(TESTER5)
+        self.add_fund(TESTER6)
         self.rowcnt = 0
+
 
 
     def load_game(self):
@@ -54,9 +60,15 @@ class GlobalMarket(object):
         ''' return a list of stocks '''
         return self.stocks
 
+    def get_global_market_funds(self):
+        return self.funds
+    
     def add_stock(self, new_stock):
         ''' Add a Stock to the GM '''
         self.stocks.append(new_stock)
+
+    def add_fund(self, new_fund):
+        self.funds.append(new_fund)
 
     def process(self):
         choice = gutils.main_menu()
