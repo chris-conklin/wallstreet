@@ -6,3 +6,6 @@ class Investment(object):
 
     def get_value(self):
         raise NotImplementedError
+
+    def get_ticker_line(self):
+        pass
